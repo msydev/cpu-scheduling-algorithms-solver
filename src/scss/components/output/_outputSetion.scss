@@ -23,4 +23,13 @@
             font: var(--f-bodySmall);
         }
     }
+    @include tablet{
+        margin:16px;
+        width: 60%;
+    }
+
+    @include desktop{
+        margin:16px;
+        width: 60%;
+    }
 }

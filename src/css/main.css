@@ -99,6 +99,20 @@ html[data-theme=dark] {
 main {
   padding: 16px;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+}
 
 .input-field {
   margin-bottom: 16px;
@@ -306,6 +320,18 @@ span.ripple {
 #input header h1 {
   font: var(--f-title3);
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  #input {
+    margin: 16px;
+    width: 40%;
+  }
+}
+@media (min-width: 1024px) {
+  #input {
+    margin: 16px;
+    width: 40%;
+  }
+}
 
 #output {
   background-color: var(--bg-secondary);
@@ -329,6 +355,18 @@ span.ripple {
   padding: 8px 16px;
   border-radius: 9px;
   font: var(--f-bodySmall);
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #output {
+    margin: 16px;
+    width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  #output {
+    margin: 16px;
+    width: 60%;
+  }
 }
 
 .ganttchart-container {

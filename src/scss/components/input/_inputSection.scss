@@ -11,4 +11,14 @@
             font: var(--f-title3);
         }
     }
+
+    @include tablet{
+        margin:16px;
+        width: 40%;
+    }
+
+    @include desktop{
+        margin:16px;
+        width: 40%;
+    }
 }

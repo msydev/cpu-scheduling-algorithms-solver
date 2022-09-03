@@ -1,0 +1,14 @@
+main{
+    padding: 16px;
+    @include tablet{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    @include desktop{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+}

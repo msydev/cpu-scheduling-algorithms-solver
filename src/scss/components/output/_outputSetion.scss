@@ -23,6 +23,11 @@
             font: var(--f-bodySmall);
         }
     }
+    & .output-body{
+        & p{
+            color: var(--tx-secondary);
+        }
+    }
     @include tablet{
         margin:16px;
         width: 60%;

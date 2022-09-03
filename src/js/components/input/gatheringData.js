@@ -1,6 +1,5 @@
 // selectedAlgo, arrivalTime, burstTime, quantumTime, priorities
-import selectedAlgorithm from "./algoSelect.js";
-
+import selectedAlgorithm from "./selectedAlgo.js";
 const getData = () => {
   const selectedAlgo = selectedAlgorithm()
   const arrivalTime = document.getElementById('arrivalTime').value;

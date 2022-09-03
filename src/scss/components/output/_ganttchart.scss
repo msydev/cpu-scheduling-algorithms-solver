@@ -1,4 +1,4 @@
-.ganttchart-container{
+.ganttchart-section{
     padding: 16px 0px;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
         color: var(--tx-secondary);
     }
 
-    .ganttchart{
+    .ganttchart-container{
         width: 100%;
         display: flex;
         align-items: center;

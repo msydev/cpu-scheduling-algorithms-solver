@@ -1,9 +1,21 @@
 const renderGanttChart = (ganttChartInfo)=>{
 
-    const jobsContainer = document.querySelector('.jobs-container')
+
+    // generate elements
+    const ganttChartSection = document.createElement('div');
+    const ganttChartContainer = document.createElement('div');
+    const jobsContainer = document.createElement('div');
+
+    // add classes
+    ganttChartSection.classList.add('ganttchart-section');
+    ganttChartContainer.classList.add('ganttchart-container');
+    jobsContainer.classList.add('jobs-container');
+
 
     // reset jobsContainer
-    jobsContainer.replaceChildren();
+    ganttChartSection.replaceChildren();
+
+
 
     const colors = ['pink', 'blue', 'green', 'orange', 'purple'];
     let colorIndex = 0;
@@ -25,7 +37,6 @@ const renderGanttChart = (ganttChartInfo)=>{
         }
       });
 
-    console.log(time,jobs)
     jobs.forEach((job, index, arr) => {
 
         // create job element
@@ -41,13 +52,18 @@ const renderGanttChart = (ganttChartInfo)=>{
         if(job === '_'){
             jobElement.classList.add('wasteTime')
         } else{
-            console.log('colorIndex',colorIndex)
             jobElement.style.setProperty('background-color',`var(--${color})`)
             colorIndex = (colorIndex + 1) % colors.length;
             color = colors[colorIndex];
         }   
         jobsContainer.append(jobElement);
     });
+
+    ganttChartSection.innerHTML = '<h1>Gantt Chart</h1>';
+    ganttChartContainer.append(jobsContainer);
+    ganttChartSection.append(ganttChartContainer);
+
+    return ganttChartSection;
 }
 
 

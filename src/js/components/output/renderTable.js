@@ -5,10 +5,11 @@ const precisionRound = (number, precision) => {
   
   const renderTable = ( solvedProcessesInfo ) => {
 
-    const tableContainer = document.querySelector('.table-container');
+    const tableSection = document.createElement('div');
+    const tableContainer = document.createElement('div');
 
-    // reset
-    tableContainer.replaceChildren()
+    tableSection.classList.add('table-section');
+    tableContainer.classList.add('table-container');
 
     const total = (array) =>
       array.reduce((acc, currentValue) => acc + currentValue, 0);
@@ -72,8 +73,9 @@ const precisionRound = (number, precision) => {
       table.append(tableHead);
       table.append(tableBody);
       table.append(tableFooter);
-
       tableContainer.append(table);
+      tableSection.append(tableContainer);
+      return tableSection;
   };
   
   export default renderTable;

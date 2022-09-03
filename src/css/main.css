@@ -356,6 +356,9 @@ span.ripple {
   border-radius: 9px;
   font: var(--f-bodySmall);
 }
+#output .output-body p {
+  color: var(--tx-secondary);
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   #output {
     margin: 16px;
@@ -369,35 +372,35 @@ span.ripple {
   }
 }
 
-.ganttchart-container {
+.ganttchart-section {
   padding: 16px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.ganttchart-container h1 {
+.ganttchart-section h1 {
   text-align: center;
   color: var(--tx-secondary);
 }
-.ganttchart-container .ganttchart {
+.ganttchart-section .ganttchart-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.ganttchart-container .ganttchart .jobs-container {
+.ganttchart-section .ganttchart-container .jobs-container {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 24px 16px 32px 16px;
 }
-.ganttchart-container .ganttchart .jobs-container .job {
+.ganttchart-section .ganttchart-container .jobs-container .job {
   display: block;
   position: relative;
   padding: 8px 16px;
 }
-.ganttchart-container .ganttchart .jobs-container .job::before {
+.ganttchart-section .ganttchart-container .jobs-container .job::before {
   content: attr(data-startTime);
   font: var(--f-bodySmall);
   position: absolute;
@@ -405,7 +408,7 @@ span.ripple {
   left: 0;
   transform: translateX(-50%);
 }
-.ganttchart-container .ganttchart .jobs-container .job:last-child::after {
+.ganttchart-section .ganttchart-container .jobs-container .job:last-child::after {
   content: attr(data-stopTime);
   font: var(--f-bodySmall);
   position: absolute;
@@ -413,7 +416,7 @@ span.ripple {
   right: 0;
   transform: translateX(50%);
 }
-.ganttchart-container .ganttchart .jobs-container .job.wasteTime {
+.ganttchart-section .ganttchart-container .jobs-container .job.wasteTime {
   background-color: var(--gray);
 }
 

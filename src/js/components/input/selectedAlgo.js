@@ -1,4 +1,4 @@
-export default function selectedAlgorithm(){
+export default function selectedAlgo(){
 
     const algoType = document.getElementById('algoType');
     const algoTypesContainer = algoType.firstElementChild;

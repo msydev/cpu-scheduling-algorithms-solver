@@ -1,0 +1,12 @@
+    // TYPOGRAPHY
+    :root{
+        --f-title1: normal normal 700 60px/72px var(--mainFont);
+        --f-title2: normal normal 700 48px/56px var(--mainFont);
+        --f-title3: normal normal 800 34px/40px var(--mainFont);
+        --f-headLine: normal normal 800 24px/32px var(--mainFont);
+        --f-subHeadLine: normal normal 700 18px/32px var(--mainFont);
+        --f-body: normal normal 400 16px/24px var(--mainFont);
+        --f-bodyBold: normal normal 700 16px/24px var(--mainFont);
+        --f-bodySmall: normal normal 400 14px/24px var(--mainFont);
+        --f-buttonLarge: normal normal 700 16px/24px var(--mainFont);
+    }

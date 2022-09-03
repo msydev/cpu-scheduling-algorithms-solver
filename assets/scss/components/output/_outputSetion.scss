@@ -1,0 +1,26 @@
+#output{
+    background-color: var(--bg-secondary);
+    padding: 16px;
+    margin-bottom: 32px;
+    border-radius: 18px;
+    font: var(--f-bodyBold);
+    overflow: hidden;
+
+    & header {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & h1{
+            font: var(--f-title3);
+        }
+
+        & .algorith-badge{
+            background-color: var(--gray);
+            padding: 8px 16px;
+            border-radius: 9px;
+            font: var(--f-bodySmall);
+        }
+    }
+}

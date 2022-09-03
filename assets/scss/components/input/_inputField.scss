@@ -1,0 +1,40 @@
+.input-field {
+  margin-bottom: 16px;
+
+  & label{
+    font: var(--f-bodySmall);
+  }
+
+  &:not(.select-algo-box, #arrivalTimeField, #burstTimeField) {
+    display: none;
+  }
+
+  & input {
+    height: 56px;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: var(--bg-secondary);
+    color: var(--tx-primary);
+    border: 2px solid var(--gray);
+    border-radius: 18px;
+    transition: all 0.2s;
+    font: var(--f-bodySmall);
+    /* Remove focus outline */
+    &:focus {
+      outline: none;
+      border: 2px solid var(--blue);
+    }
+    /* Remove IE arrow */
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+      -webkit-transition-delay: 9999s;
+}
+  }
+}

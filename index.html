@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section id="input">
+            <header>
+                <h1>Input</h1>
+            </header>
+
+                <!-- <select name="algoType" id="algoType">
+                    <option value="FCFS">First Come First Serve, FCFS</option>
+                    <option value="SJF">Shortest Job First, SJF (non-preemptive)</option>
+                    <option value="SRTF">Shortest Remaining Time First, SRTF</option>
+                    <option value="RR">Round-Robin, RR</option>
+                    <option value="NPP">Priority (non-preemptive)</option>
+                    <option value="PP">Priority (preemptive)</option>
+                </select> -->
+                <div class="select-field" id="selectAlgoField">
+                <label for="algoType">Algorithm Type</label> 
+                <details class="algorithm-type" id="algoType">
+                    <summary class="radios">
+                        <!-- <input type="radio" name="item" id="default" title="Choose The Algorithm" checked> -->
+                        <input type="radio" name="item" id="FCFS" title="First Come First Serve, FCFS" checked>
+                        <input type="radio" name="item" id="SJF" title="Shortest Job First, SJF (non-preemptive)">
+                        <input type="radio" name="item" id="SRTF" title="Shortest Remaining Time First, SRTF">
+                        <input type="radio" name="item" id="RR" title="Round-Robin, RR">
+                        <input type="radio" name="item" id="NPP" title="Priority (non-preemptive), NPP">
+                        <input type="radio" name="item" id="PP" title="Priority (preemptive), PP">
+                    </summary>
+
+                    <ul class="list"  id="algoTypeUl">
+                        <li>
+                            <label for="FCFS">
+                                First Come First Serve, FCFS
+                                <span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="SJF">Shortest Job First, SJF (non-preemptive)</label>
+                        </li>
+                        <li>
+                            <label for="SRTF">Shortest Remaining Time First, SRTF</label>
+                        </li>
+                        <li>
+                            <label for="RR">Round-Robin, RR</label>
+                        </li>
+                        <li>
+                            <label for="NPP">Priority (non-preemptive), NPP</label>
+                        </li>
+                        <li>
+                            <label for="PP">Priority (preemptive), PP</label>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+
+            
+            <!-- Arrival Time -->
+            <div class="input-field" id="arrivalTimeField">
+                <label for="arrivalTime">Arrival Time</label>
+                <input type="text" placeholder="Example: 2 4 1 3" class="arrival-time" id="arrivalTime">
+            </div>
+
+            <!-- Burst Time -->
+            <div class="input-field" id="burstTimeField">
+                <label for="burstTime">Burst Time</label> 
+                <input type="text" placeholder="Example: 2 4 1 3" class="burst-time" id="burstTime">
+            </div>
+
+            <!-- Priority -->
+            <div class="input-field" id="prioritiesField">
+                <label for="arrivalTime">Priority</label>
+                <input type="text" placeholder="Example: 2 4 1 3" class="priorities" id="priorities">
+            </div>
+
+            <!-- Quantom Time -->
+            <div class="input-field" id="quantomTimeField">
+                <label for="arrivalTime">Quantom Time</label>
+                <input type="number" placeholder="Example: 3" class="quantom-time" id="quantumTime" >
+            </div>
+
+
+            <button class="btn solve-btn">Solve</button>
+            
+
+        </section>
+
+        <!-- OUTPUT -->
+        <section id="output">
+            <header>
+                <h1>Output</h1>
+                <span class="algorith-badge">FCFS</span>
+            </header>
+
+            <div class="ganttchart-container">
+                <h1>Gantt Chart</h1>
+                <div class="ganttchart">
+                    <div class="jobs-container">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-section">
+                <div class="table-container">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.table-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .table-container{
+        display: flex;
+        justify-content: start;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 16px 0px;
+
+        & table{
+            border: none;
+            border-collapse: collapse;
+            & th,
+            & td{
+                padding: 4px 8px;
+                border: 1px solid var(--lightGray);
+                text-align: center;
+            }
+            & thead tr th{
+                    background-color: var(--gray);
+                    font: var(--f-bodySmall);
+                    white-space: nowrap;
+                }
+            }
+    
+            & tr{
+                & td{
+                    font: var(--f-bodySmall);
+                }
+            }
+    }
+}

@@ -1,0 +1,14 @@
+#input{
+    background-color: var(--bg-secondary);
+    padding: 16px;
+    margin-bottom: 32px;
+    border-radius: 18px;
+    font: var(--f-bodyBold);
+
+    & header {
+        margin-bottom: 16px;
+        & h1{
+            font: var(--f-title3);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+html[data-theme='light']{
+    //colors
+    --blue: var(--blue5);
+    --lightBlue: var(--blue8);
+    --darkBlue: var(--blue3);
+    --gray:var(--gray3);
+    --lightGray:var(--gray4);;
+
+    --pink:var(--pink5);
+    --green:var(--green2);
+    --orange:var(--orange5);
+    --purple:var(--purble5);
+
+    //backgrounds
+    --bg-primary:var(--gray12);
+    --bg-secondary:var(--white);
+    --bg-tertiary:var(--gray11);
+
+    //text
+    --tx-primary:var(--gray1);
+    --tx-secondary:var(--gray6);
+}

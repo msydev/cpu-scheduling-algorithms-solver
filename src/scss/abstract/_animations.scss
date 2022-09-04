@@ -1,0 +1,17 @@
+@include keyframes-animation(slideDown){
+    0%{
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+    100%{
+        opacity: 1; 
+        transform: translateY(0px);
+    }
+}
+
+@include keyframes-animation(ripple){
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }

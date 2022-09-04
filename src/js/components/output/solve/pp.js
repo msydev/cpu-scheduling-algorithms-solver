@@ -175,6 +175,5 @@ export const pp = (
     return 0;
   });
 
-  console.log(solvedProcessesInfo, ganttChartInfo)
   return { solvedProcessesInfo, ganttChartInfo };
 };

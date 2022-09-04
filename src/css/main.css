@@ -1,4 +1,5 @@
 :root {
+  --white:#ffffff;
   --gray1:#0f0d15;
   --gray2:#1d1929;
   --gray3:#34303e;
@@ -19,6 +20,38 @@
   --mainFont: "Nunito Sans", sans-serif;
 }
 
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
 :root {
   --f-title1: normal normal 700 60px/72px var(--mainFont);
   --f-title2: normal normal 700 48px/56px var(--mainFont);
@@ -79,6 +112,23 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
+html[data-theme=light] {
+  --blue: var(--blue5);
+  --lightBlue: var(--blue8);
+  --darkBlue: var(--blue3);
+  --gray:var(--gray3);
+  --lightGray:var(--gray4);
+  --pink:var(--pink5);
+  --green:var(--green2);
+  --orange:var(--orange5);
+  --purple:var(--purble5);
+  --bg-primary:var(--gray12);
+  --bg-secondary:var(--white);
+  --bg-tertiary:var(--gray11);
+  --tx-primary:var(--gray1);
+  --tx-secondary:var(--gray6);
+}
+
 html[data-theme=dark] {
   --blue: var(--blue5);
   --lightBlue: var(--blue8);
@@ -94,10 +144,25 @@ html[data-theme=dark] {
   --bg-tertiary:var(--gray3);
   --tx-primary:var(--gray11);
   --tx-secondary:var(--gray6);
+  /*
+
+  --input-bg-default:;
+  --input-bg-hover:;
+  --input-bg-focused:;
+
+  --input-border-default:;
+  --input-border-hover:;
+  --input-border-focused:;
+
+  --input-tx-primary:;
+  --input-tx-secondary:;
+
+  */
 }
 
 main {
   padding: 16px;
+  height: 200vh;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   main {
@@ -149,6 +214,7 @@ main {
 }
 
 .solve-btn {
+  display: inline-block;
   position: relative;
   overflow: hidden;
   background-color: var(--blue);
@@ -162,8 +228,10 @@ main {
 .solve-btn:hover {
   background-color: var(--darkBlue);
 }
-
-span.ripple {
+.solve-btn span {
+  position: absolute;
+}
+.solve-btn span.ripple {
   position: absolute;
   border-radius: 50%;
   transform: scale(0);
@@ -171,12 +239,6 @@ span.ripple {
   background-color: var(--lightBlue);
 }
 
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
 .select-field {
   margin-bottom: 16px;
 }
@@ -399,6 +461,7 @@ span.ripple {
   display: block;
   position: relative;
   padding: 8px 16px;
+  opacity: 0;
 }
 .ganttchart-section .ganttchart-container .jobs-container .job::before {
   content: attr(data-startTime);

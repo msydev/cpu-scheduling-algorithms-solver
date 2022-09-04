@@ -17,3 +17,12 @@ $desktop-width: 1024px;
     @content;
   }
 }
+
+@mixin keyframes-animation($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

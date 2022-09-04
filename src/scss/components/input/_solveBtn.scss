@@ -1,4 +1,5 @@
 .solve-btn{
+  display: inline-block;
   position: relative;
   overflow: hidden;
   background-color: var(--blue);
@@ -12,19 +13,15 @@
   &:hover{
       background-color: var(--darkBlue);
   }
-}
+  & span{
+    position: absolute;
 
-span.ripple {
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple 600ms linear;
-  background-color: var(--lightBlue);
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
+  }
+  & span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: var(--lightBlue);
   }
 }

@@ -1,3 +1,5 @@
+import addAnim from "../../animations/addAnim.js";
+
 const renderGanttChart = (ganttChartInfo)=>{
 
 
@@ -15,11 +17,10 @@ const renderGanttChart = (ganttChartInfo)=>{
     // reset jobsContainer
     ganttChartSection.replaceChildren();
 
-
-
     const colors = ['pink', 'blue', 'green', 'orange', 'purple'];
     let colorIndex = 0;
     let color = colors[colorIndex];
+    let delay = 0;
 
     const time = [];
     const jobs = [];
@@ -42,6 +43,9 @@ const renderGanttChart = (ganttChartInfo)=>{
         // create job element
         const jobElement = document.createElement('span');
 
+        // add animation to job
+        addAnim(jobElement, 'slideDown','0.5s',`${delay}s`,'ease-out',1,'normal','forwards')
+        delay += 0.2
 
         jobElement.setAttribute('data-startTime',`${time[index]}`);
         jobElement.setAttribute('data-stopTime',`${time[index+1]}`);

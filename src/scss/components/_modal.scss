@@ -1,0 +1,22 @@
+.modal-overly{
+    @extend %flex-center-center;
+    background-color: var(--overly);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    & .moadl{
+        @extend %flex-center-center;
+        
+    }
+}
+
+.modal-overly-show{
+    opacity: 0.5;
+}

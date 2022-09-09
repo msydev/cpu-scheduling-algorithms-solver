@@ -1,0 +1,12 @@
+.logo-container{
+    @extend %flex-center-center;
+    & svg{
+        fill:var(--logo-bg);
+        @extend %flex-center-center;
+        margin-right: 8px;
+    }
+    & .title{
+        font: var(--f-bodyBold);
+        color: var(--tx-primary);
+    }
+}

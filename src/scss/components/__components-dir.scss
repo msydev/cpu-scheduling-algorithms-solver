@@ -1,10 +1,18 @@
+// HEADER
+@import './header/themeToggle';
+@import './header/logo';
+
+// MAIN
+
 // input
-@import './input/inputField';
-@import './input/solveBtn';
-@import './input/selectField';
-@import './input/inputSection';
+@import './main/input/inputField';
+@import './main/input/solveBtn';
+@import './main/input/selectField';
+@import './main/input/inputSection';
 
 // output
-@import './output/outputSetion';
-@import './output/ganttchart';
-@import './output//table';
+@import './main/output/outputSetion';
+@import './main/output/ganttchart';
+@import './main/output//table';
+
+@import 'modal';

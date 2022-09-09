@@ -4,14 +4,15 @@ import handleSelectBox from "./components/input/handleSelectBox.js";
 import { solve } from "./components/output/solve/index.js";
 import getData from "./components/input/gatheringData.js";
 import output from "./components/output/output.js";
+import { themeToggle } from "./components/themeToggle.js";
 
 // const
 const solveBtn = document.querySelector('.solve-btn');
 
 // init UI
 solveBtn.addEventListener("click", createRipple);
-handleSelectBox()
-
+handleSelectBox();
+themeToggle();
 solveBtn.addEventListener("click",function(){
         const data = getData();
         if(data === undefined || data === null){

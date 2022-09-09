@@ -3,7 +3,7 @@
   position: relative;
   overflow: hidden;
   background-color: var(--blue);
-  color: var(--tx-primary);
+  color: var(--white);
   font: var(--f-bodyBold);
   border-radius: 9px;
   padding: 12px 32px;
@@ -15,7 +15,6 @@
   }
   & span{
     position: absolute;
-
   }
   & span.ripple {
     position: absolute;

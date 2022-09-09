@@ -3,6 +3,7 @@
 
     // White
     --white:#ffffff;
+    --black:#000000;
 
     // Gray
     --gray1:#0f0d15;
@@ -11,6 +12,7 @@
     --gray4:#4a4754;
     --gray6:#77757f;
     --gray8:#A5A3A9;
+    --gray10:#d2d1d4;
     --gray11:#e8e8ea;
     --gray12:#f9f9f9;
 
@@ -24,7 +26,7 @@
     --pink5:#fb339b;
 
     //Green
-    --green2:#1bd2a4;
+    --green2:#34C759;
 
     //Orange
     --orange5:#ff8b34;
@@ -33,15 +35,16 @@
     --purble5:#e18cf9;
 
     // Gradients
-    --gradiantGreenToBlue: linear-gradient(254.81deg, #1A50FF 8.13%, #1EE9B6 92.46%);
+    // --gradiantGreenToBlue: linear-gradient(254.81deg, #1A50FF 8.13%, #1EE9B6 92.46%);
 
 
+    //shadow 
+    --bx-shad: rgb(0 0 0 / 10%) 0px 0px 2px, rgb(15 91 206 / 10%) 0px 2px 32px;
     // FONTS 
     --mainFont: 'Nunito Sans', sans-serif;
 
 
 
 }
-
 
 

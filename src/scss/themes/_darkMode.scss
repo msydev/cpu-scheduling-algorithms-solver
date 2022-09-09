@@ -1,37 +1,47 @@
 html[data-theme='dark']{
-    //colors
-    --blue: var(--blue5);
-    --lightBlue: var(--blue8);
-    --darkBlue: var(--blue3);
-    --gray:var(--gray3);
-    --lightGray:var(--gray4);;
+  //colors
 
-    --pink:var(--pink5);
-    --green:var(--green2);
-    --orange:var(--orange5);
-    --purple:var(--purble5);
+  --light:var(--gray11);
+  --dark:var(--gray3);
 
-    //backgrounds
-    --bg-primary:var(--gray1);
-    --bg-secondary:var(--gray2);
-    --bg-tertiary:var(--gray3);
+  --blue: var(--blue5);
+  --lightBlue: var(--blue8);
+  --darkBlue: var(--blue3);
+  --gray:var(--gray3);
+  --lightGray:var(--gray4);;
+ 
+  --pink:var(--pink5);
+  --green:var(--green2);
+  --orange:var(--orange5);
+  --purple:var(--purble5);
 
-    //text
-    --tx-primary:var(--gray11);
-    --tx-secondary:var(--gray6);
+  //backgrounds
+  --bg-primary:var(--gray1);
+  --bg-secondary:var(--gray2);
+  --bg-tertiary:var(--gray3);
 
-    /*
-    
-  --input-bg-default:;
-  --input-bg-hover:;
-  --input-bg-focused:;
+  //text
+  --tx-primary:var(--gray11);
+  --tx-primary-rev:var(--black);
+  --tx-secondary:var(--gray6);
 
-  --input-border-default:;
-  --input-border-hover:;
-  --input-border-focused:;
+  --border-table: solid 1px var(--gray4);
 
-  --input-tx-primary:;
-  --input-tx-secondary:;
+  --bx-shad:none;
 
-  */
+  --logo-bg:var(--blue8);
+  /*
+  
+--input-bg-default:;
+--input-bg-hover:;
+--input-bg-focused:;
+
+--input-border-default:;
+--input-border-hover:;
+--input-border-focused:;
+
+--input-tx-primary:;
+--input-tx-secondary:;
+
+*/
 }

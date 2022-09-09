@@ -25,27 +25,31 @@
                 display: block;
                 position: relative;
                 padding: 8px 16px;
+                color: var(--white);
                 opacity: 0;
-                
-                &::before{
-                    content: attr(data-startTime);
+                &::before,
+                &::after{
+                    color: var(--tx-primary);
                     font: var(--f-bodySmall);
                     position: absolute;
                     bottom: -24px;
+                }
+                &::before{
+                    content: attr(data-startTime);
+                    
                     left: 0;
                     transform: translateX(-50%);
                 }
 
                 &:last-child::after{
                     content: attr(data-stopTime);
-                    font: var(--f-bodySmall);
-                    position: absolute;
-                    bottom: -24px;
+                    
                     right: 0;
                     transform: translateX(50%);
                 }
 
                 &.wasteTime{
+                    color: var(--tx-primary);
                     background-color: var(--gray);
                 }
             }

@@ -1,0 +1,41 @@
+.table-section {
+  @extend %flex-center-center;
+
+  .table-container {
+    display: flex;
+    justify-content: start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 16px 0px;
+
+    & table {
+      border: none;
+      border-collapse: collapse;
+      border: var(--border-table);
+      white-space: nowrap;
+      text-align: center;
+      & td,
+      & th{
+        border: var(--border-table);
+      }
+      & thead tr th {
+        
+        padding: 8px 16px;
+        background-color: var(--gray);
+      }
+
+      & tbody tr,
+      & tfoot tr {
+        font: var(--f-bodySmall);
+      }
+
+
+      & tbody tr,
+      & tbody td,
+      & tfoot tr,
+      & tfoot td {
+        padding: 8px 8px;
+      }
+    }
+  }
+}

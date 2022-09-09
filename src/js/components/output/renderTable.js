@@ -25,9 +25,9 @@ const precisionRound = (number, precision) => {
     const averageWAT = totalWAT / numberOfProcesses;
   
     const table = document.createElement('table');
-    const tableBody = document.createElement('tbody');
     const tableHead = document.createElement('thead');
-    const tableFooter = document.createElement('tfoot');
+    const tableBody = document.createElement('tbody');
+    const tableFooter = document.createElement('tr');
 
     tableHead.innerHTML = `
         <tr>
@@ -58,21 +58,19 @@ const precisionRound = (number, precision) => {
 
 
       tableFooter.innerHTML = `
-              <tr>
                 <td colspan="4" >
                   Average
                 </td>
                 <td>
-                  ${totalTAT} / ${numberOfProcesses} = ${precisionRound(averageTAT, 3)}
+                  ${totalTAT} / ${numberOfProcesses} = ${precisionRound(averageTAT, 2)}
                 </td>
                 <td>
-                  ${totalWAT} / ${numberOfProcesses} = ${precisionRound(averageWAT, 3)}
-                </td>
-              </tr>`;   
+                  ${totalWAT} / ${numberOfProcesses} = ${precisionRound(averageWAT, 2)}
+                </td>`;   
 
       table.append(tableHead);
       table.append(tableBody);
-      table.append(tableFooter);
+      tableBody.append(tableFooter);
       tableContainer.append(table);
       tableSection.append(tableContainer);
       return tableSection;

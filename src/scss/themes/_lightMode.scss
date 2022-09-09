@@ -1,10 +1,13 @@
 html[data-theme='light']{
     //colors
+    --light:var(--gray12);
+    --dark:var(--gray3);
+
     --blue: var(--blue5);
     --lightBlue: var(--blue8);
     --darkBlue: var(--blue3);
-    --gray:var(--gray3);
-    --lightGray:var(--gray4);;
+    --gray:var(--gray11);
+    --lightGray:var(--gray11);;
 
     --pink:var(--pink5);
     --green:var(--green2);
@@ -14,9 +17,16 @@ html[data-theme='light']{
     //backgrounds
     --bg-primary:var(--gray12);
     --bg-secondary:var(--white);
-    --bg-tertiary:var(--gray11);
+    --bg-tertiary:var(--white);
 
     //text
     --tx-primary:var(--gray1);
+    --tx-primary-rev:var(--white);
     --tx-secondary:var(--gray6);
+
+    --border-table: solid 1px var(--gray10);
+
+    --box-shadow:var(--bx-shad);
+
+    --logo-bg:var(--blue);
 }

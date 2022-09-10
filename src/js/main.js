@@ -15,10 +15,13 @@ solveBtn.addEventListener("click", createRipple);
 handleSelectBox();
 themeToggle();
 solveBtn.addEventListener("click",function(){
-        const data = getData();
-        if(data === undefined || data === null){
-            return;
-        } else{
+    const data = getData();
+    if(data === undefined || data === null){
+        return;
+    } else{
+            if(window.innerWidth <= 768){
+                document.getElementById("output").scrollIntoView();
+            }
             const [selectedAlgo, arrivalTime, burstTime, quantumTime, priorities] = data;
             const solved = solve(selectedAlgo ,arrivalTime, burstTime, quantumTime, priorities);
             output(solved.ganttChartInfo, solved.solvedProcessesInfo, selectedAlgo);

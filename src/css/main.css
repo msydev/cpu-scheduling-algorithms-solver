@@ -154,7 +154,7 @@ html[data-theme=light] {
   --tx-secondary:var(--gray6);
   --border-table: solid 1px var(--gray10);
   --box-shadow:var(--bx-shad);
-  --logo-bg:var(--blue);
+  --blue-on-color:var(--blue);
 }
 
 html[data-theme=dark] {
@@ -177,7 +177,7 @@ html[data-theme=dark] {
   --tx-secondary:var(--gray6);
   --border-table: solid 1px var(--gray4);
   --bx-shad:none;
-  --logo-bg:var(--blue8);
+  --blue-on-color:var(--blue5);
   /*
 
   --input-bg-default:;
@@ -281,7 +281,7 @@ main {
 }
 
 .logo-container svg {
-  fill: var(--logo-bg);
+  fill: var(--blue-on-color);
   margin-right: 8px;
 }
 .logo-container .title {
@@ -612,7 +612,7 @@ main {
 }
 .cpu-utilization-container .chart .circular-chart .circle {
   fill: none;
-  stroke: var(--blue);
+  stroke: var(--blue-on-color);
   stroke-width: 4;
   stroke-linecap: round;
   animation: progress 1s ease-out forwards;
@@ -639,7 +639,7 @@ main {
   border-radius: 4px;
 }
 .cpu-utilization-container .chart-details .detial .dot-cpu-utilization {
-  background-color: var(--blue);
+  background-color: var(--blue-on-color);
 }
 .cpu-utilization-container .chart-details .detial .dot-idle-time {
   background-color: var(--gray);
@@ -647,6 +647,7 @@ main {
 .cpu-utilization-container .chart-details .detial p {
   flex: 1;
   padding-left: 8px;
+  color: var(--tx-primary) !important;
 }
 .cpu-utilization-container .chart-details .detial .value {
   color: var(--tx-secondary);

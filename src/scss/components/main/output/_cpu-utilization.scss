@@ -14,7 +14,7 @@
       }
       & .circle {
         fill: none;
-        stroke: var(--blue);
+        stroke: var(--blue-on-color);
         stroke-width: 4;
         stroke-linecap: round;
         animation: progress 1s ease-out forwards;
@@ -44,7 +44,7 @@
 
       }
       & .dot-cpu-utilization{
-        background-color: var(--blue);
+        background-color: var(--blue-on-color);
       }
       & .dot-idle-time{
         background-color: var(--gray);
@@ -52,6 +52,7 @@
       & p{
         flex: 1;
         padding-left: 8px;
+        color: var(--tx-primary) !important;
       }
       & .value{
         color: var(--tx-secondary);

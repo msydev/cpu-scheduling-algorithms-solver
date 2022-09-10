@@ -1,7 +1,7 @@
 .logo-container{
     @extend %flex-center-center;
     & svg{
-        fill:var(--logo-bg);
+        fill:var(--blue-on-color);
         @extend %flex-center-center;
         margin-right: 8px;
     }

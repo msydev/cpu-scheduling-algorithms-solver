@@ -5,6 +5,7 @@ import { solve } from "./components/output/solve/index.js";
 import getData from "./components/input/gatheringData.js";
 import output from "./components/output/output.js";
 import { themeToggle } from "./components/themeToggle.js";
+import renderCpuUtilization from "./components/output/renderCpuUtilization.js";
 
 // const
 const solveBtn = document.querySelector('.solve-btn');
@@ -21,6 +22,7 @@ solveBtn.addEventListener("click",function(){
             const [selectedAlgo, arrivalTime, burstTime, quantumTime, priorities] = data;
             const solved = solve(selectedAlgo ,arrivalTime, burstTime, quantumTime, priorities);
             output(solved.ganttChartInfo, solved.solvedProcessesInfo, selectedAlgo);
+            renderCpuUtilization(solved.ganttChartInfo)
         }
     
 });

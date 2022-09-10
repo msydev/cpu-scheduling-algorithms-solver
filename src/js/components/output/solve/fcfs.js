@@ -21,7 +21,8 @@ export const fcfs = (arrivalTime, burstTime) => {
     let finishTime = [];
      let ganttChartInfo = [];
   
-    const solvedProcessesInfo = processesInfo.map((process, index) => {
+     const solvedProcessesInfo = processesInfo.map((process, index) => {
+      console.log('i',index,' process',process)
       if (index === 0 || process.at > finishTime[index - 1]) {
         finishTime[index] = process.at + process.bt;
   

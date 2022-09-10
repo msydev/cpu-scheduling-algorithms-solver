@@ -4,16 +4,9 @@ html[data-theme='dark']{
   --light:var(--gray11);
   --dark:var(--gray3);
 
-  --blue: var(--blue5);
-  --lightBlue: var(--blue8);
-  --darkBlue: var(--blue3);
   --gray:var(--gray3);
-  --lightGray:var(--gray4);;
- 
-  --pink:var(--pink5);
-  --green:var(--green2);
-  --orange:var(--orange5);
-  --purple:var(--purble5);
+  --light-gray:var(--gray4);
+  --blue-switch:var(--light-blue);
 
   //backgrounds
   --bg-primary:var(--gray1);
@@ -28,20 +21,4 @@ html[data-theme='dark']{
   --border-table: solid 1px var(--gray4);
 
   --bx-shad:none;
-
-  --blue-on-color:var(--blue5);
-  /*
-  
---input-bg-default:;
---input-bg-hover:;
---input-bg-focused:;
-
---input-border-default:;
---input-border-hover:;
---input-border-focused:;
-
---input-tx-primary:;
---input-tx-secondary:;
-
-*/
 }

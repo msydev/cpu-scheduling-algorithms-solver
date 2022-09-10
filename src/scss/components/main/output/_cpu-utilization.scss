@@ -14,7 +14,7 @@
       }
       & .circle {
         fill: none;
-        stroke: var(--blue-on-color);
+        stroke: var(--blue-switch);
         stroke-width: 4;
         stroke-linecap: round;
         animation: progress 1s ease-out forwards;
@@ -39,12 +39,11 @@
       }
       & .dot{
         @include size(16px);
-        background-color: red;
         border-radius: 4px;
 
       }
       & .dot-cpu-utilization{
-        background-color: var(--blue-on-color);
+        background-color: var(--blue-switch);
       }
       & .dot-idle-time{
         background-color: var(--gray);

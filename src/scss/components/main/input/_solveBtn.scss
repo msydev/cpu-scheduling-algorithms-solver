@@ -11,7 +11,7 @@
   transition: all .2s;
 
   &:hover{
-      background-color: var(--darkBlue);
+      background-color: var(--dark-blue);
   }
   & span{
     position: absolute;
@@ -21,6 +21,6 @@
     border-radius: 50%;
     transform: scale(0);
     animation: ripple 600ms linear;
-    background-color: var(--lightBlue);
+    background-color: var(--light-blue);
   }
 }

@@ -10,14 +10,13 @@
   --gray10:#d2d1d4;
   --gray11:#e8e8ea;
   --gray12:#f9f9f9;
-  --blue1:#0030cc;
-  --blue3:#003cff;
-  --blue5:#3363FF;
-  --blue8:#809eff;
-  --pink5:#fb339b;
-  --green2:#34C759;
-  --orange5:#ff8b34;
-  --purble5:#e18cf9;
+  --blue:#3363FF;
+  --dark-blue:#003cff;
+  --light-blue:#4d77ff;
+  --pink:#fb339b;
+  --green:#34C759;
+  --orange:#ff8b34;
+  --purble:#e18cf9;
   --bx-shad: rgb(0 0 0 / 10%) 0px 0px 2px, rgb(15 91 206 / 10%) 0px 2px 32px;
   --mainFont: "Nunito Sans", sans-serif;
 }
@@ -137,15 +136,9 @@ input[type=number]::-webkit-inner-spin-button {
 html[data-theme=light] {
   --light:var(--gray12);
   --dark:var(--gray3);
-  --blue: var(--blue5);
-  --lightBlue: var(--blue8);
-  --darkBlue: var(--blue3);
   --gray:var(--gray11);
-  --lightGray:var(--gray11);
-  --pink:var(--pink5);
-  --green:var(--green2);
-  --orange:var(--orange5);
-  --purple:var(--purble5);
+  --light-gray:var(--gray11);
+  --blue-switch:var(--blue);
   --bg-primary:var(--gray12);
   --bg-secondary:var(--white);
   --bg-tertiary:var(--white);
@@ -154,21 +147,14 @@ html[data-theme=light] {
   --tx-secondary:var(--gray6);
   --border-table: solid 1px var(--gray10);
   --box-shadow:var(--bx-shad);
-  --blue-on-color:var(--blue);
 }
 
 html[data-theme=dark] {
   --light:var(--gray11);
   --dark:var(--gray3);
-  --blue: var(--blue5);
-  --lightBlue: var(--blue8);
-  --darkBlue: var(--blue3);
   --gray:var(--gray3);
-  --lightGray:var(--gray4);
-  --pink:var(--pink5);
-  --green:var(--green2);
-  --orange:var(--orange5);
-  --purple:var(--purble5);
+  --light-gray:var(--gray4);
+  --blue-switch:var(--light-blue);
   --bg-primary:var(--gray1);
   --bg-secondary:var(--gray2);
   --bg-tertiary:var(--gray3);
@@ -177,21 +163,6 @@ html[data-theme=dark] {
   --tx-secondary:var(--gray6);
   --border-table: solid 1px var(--gray4);
   --bx-shad:none;
-  --blue-on-color:var(--blue5);
-  /*
-
-  --input-bg-default:;
-  --input-bg-hover:;
-  --input-bg-focused:;
-
-  --input-border-default:;
-  --input-border-hover:;
-  --input-border-focused:;
-
-  --input-tx-primary:;
-  --input-tx-secondary:;
-
-  */
 }
 
 .header {
@@ -281,7 +252,7 @@ main {
 }
 
 .logo-container svg {
-  fill: var(--blue-on-color);
+  fill: var(--blue-switch);
   margin-right: 8px;
 }
 .logo-container .title {
@@ -335,7 +306,7 @@ main {
   transition: all 0.2s;
 }
 .solve-btn:hover {
-  background-color: var(--darkBlue);
+  background-color: var(--dark-blue);
 }
 .solve-btn span {
   position: absolute;
@@ -345,7 +316,7 @@ main {
   border-radius: 50%;
   transform: scale(0);
   animation: ripple 600ms linear;
-  background-color: var(--lightBlue);
+  background-color: var(--light-blue);
 }
 
 .select-field {
@@ -430,7 +401,7 @@ main {
   padding: 8px 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid var(--lightGray);
+  border: 1px solid var(--light-gray);
   border-radius: 5px;
   max-height: 200px;
   overflow-y: auto;
@@ -443,7 +414,7 @@ main {
   font: var(--f-bodySmall);
 }
 .select-field details ul li:hover {
-  background-color: var(--lightGray);
+  background-color: var(--light-gray);
 }
 .select-field details ul li label {
   padding: 8px 0px;
@@ -451,7 +422,7 @@ main {
   display: flex;
   cursor: pointer;
   justify-content: space-between;
-  border-bottom: 1px solid var(--lightGray);
+  border-bottom: 1px solid var(--light-gray);
 }
 .select-field details ul li label span {
   --display: none;
@@ -612,7 +583,7 @@ main {
 }
 .cpu-utilization-container .chart .circular-chart .circle {
   fill: none;
-  stroke: var(--blue-on-color);
+  stroke: var(--blue-switch);
   stroke-width: 4;
   stroke-linecap: round;
   animation: progress 1s ease-out forwards;
@@ -635,11 +606,10 @@ main {
 .cpu-utilization-container .chart-details .detial .dot {
   width: 16px;
   height: 16px;
-  background-color: red;
   border-radius: 4px;
 }
 .cpu-utilization-container .chart-details .detial .dot-cpu-utilization {
-  background-color: var(--blue-on-color);
+  background-color: var(--blue-switch);
 }
 .cpu-utilization-container .chart-details .detial .dot-idle-time {
   background-color: var(--gray);

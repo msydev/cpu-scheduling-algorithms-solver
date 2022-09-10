@@ -3,16 +3,9 @@ html[data-theme='light']{
     --light:var(--gray12);
     --dark:var(--gray3);
 
-    --blue: var(--blue5);
-    --lightBlue: var(--blue8);
-    --darkBlue: var(--blue3);
     --gray:var(--gray11);
-    --lightGray:var(--gray11);;
-
-    --pink:var(--pink5);
-    --green:var(--green2);
-    --orange:var(--orange5);
-    --purple:var(--purble5);
+    --light-gray:var(--gray11);
+    --blue-switch:var(--blue);
 
     //backgrounds
     --bg-primary:var(--gray12);
@@ -28,5 +21,4 @@ html[data-theme='light']{
 
     --box-shadow:var(--bx-shad);
 
-    --blue-on-color:var(--blue);
 }

@@ -23,6 +23,7 @@ solveBtn.addEventListener("click",function(e){
         const solved = solve(selectedAlgo ,arrivalTime, burstTime, quantumTime, priorities);
         output(solved.ganttChartInfo, solved.solvedProcessesInfo, selectedAlgo);
         if(window.innerWidth <= 768){
+            document.activeElement.blur();
             console.log(e.currentTarget)
             scrollTo(
                 0,

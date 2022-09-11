@@ -318,6 +318,11 @@ main {
   animation: ripple 600ms linear;
   background-color: var(--light-blue);
 }
+@media (max-width: 599px) {
+  .solve-btn:hover {
+    background-color: var(--blue);
+  }
+}
 
 .select-field {
   margin-bottom: 16px;

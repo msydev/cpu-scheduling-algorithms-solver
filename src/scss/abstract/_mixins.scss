@@ -18,6 +18,9 @@ $desktop-width: 1024px;
   }
 }
 
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
 
 @mixin keyframes-animation($name) {
   @-webkit-keyframes #{$name} {

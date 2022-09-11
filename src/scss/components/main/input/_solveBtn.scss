@@ -23,4 +23,9 @@
     animation: ripple 600ms linear;
     background-color: var(--light-blue);
   }
+  @include for-phone-only{
+    &:hover{
+    background-color: var(--blue);
+    };
+  }
 }

@@ -20,7 +20,7 @@ const renderGanttChart = (ganttChartInfo)=>{
     const colors = ['pink', 'blue', 'green', 'orange', 'purple'];
     let colorIndex = 0;
     let color = colors[colorIndex];
-    let delay = 0;
+    let delay = 0.5;
 
     const time = [];
     const jobs = [];

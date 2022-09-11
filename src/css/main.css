@@ -591,7 +591,7 @@ main {
   stroke: var(--blue-switch);
   stroke-width: 4;
   stroke-linecap: round;
-  animation: progress 1s ease-out forwards;
+  animation: progress 2s ease-out forwards;
 }
 .cpu-utilization-container .chart .circular-chart .percentage {
   fill: var(--tx-secondary);

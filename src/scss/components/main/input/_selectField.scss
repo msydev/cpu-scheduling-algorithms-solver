@@ -102,6 +102,7 @@
         padding: 0px 16px;
         color: var(--tx-primary);
         font: var(--f-bodySmall);
+        border-bottom: 1px solid var(--light-gray);
 
         &:hover {
           background-color: var(--light-gray);
@@ -113,7 +114,6 @@
           display: flex;
           cursor: pointer;
           justify-content: space-between;
-          border-bottom: 1px solid var(--light-gray);
         }
 
         & label span {

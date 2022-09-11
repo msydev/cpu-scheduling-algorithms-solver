@@ -34,7 +34,7 @@ solveBtn.addEventListener("click", function (e) {
       if (activeEl.classList.contains("input"))
         hideKeyboard(document.activeElement);
       setTimeout(function () {
-        scrollTo(0, document.getElementById("output").offsetTop, "smooth");
+        document.getElementById('output').scrollIntoView();
       }, 100);
     }
   }

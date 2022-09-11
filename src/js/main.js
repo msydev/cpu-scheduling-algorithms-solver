@@ -23,8 +23,9 @@ solveBtn.addEventListener("click",function(e){
         const solved = solve(selectedAlgo ,arrivalTime, burstTime, quantumTime, priorities);
         output(solved.ganttChartInfo, solved.solvedProcessesInfo, selectedAlgo);
         if(window.innerWidth <= 768){
-            document.activeElement.blur();
-            console.log(e.currentTarget)
+           ;
+            if(document.activeElement.classList.contains('input'))
+            hideKeyboard(document.activeEl);
             scrollTo(
                 0,
                 document.getElementById('output').offsetTop,
@@ -34,3 +35,14 @@ solveBtn.addEventListener("click",function(e){
         }
     
 });
+
+function hideKeyboard(element) {
+    element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
+    element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
+    setTimeout(function() {
+        element.blur();  //actually close the keyboard
+        // Remove readonly attribute after keyboard is hidden.
+        element.removeAttr('readonly');
+        element.removeAttr('disabled');
+    }, 100);
+}

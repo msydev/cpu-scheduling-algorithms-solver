@@ -37,7 +37,6 @@ const renderGanttChart = (ganttChartInfo)=>{
           time.push(item.start, item.stop);
         }
       });
-      console.log(time)
     jobs.forEach((job, index, arr) => {
 
         // create job element

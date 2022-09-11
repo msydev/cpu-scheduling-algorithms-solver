@@ -35,7 +35,7 @@ solveBtn.addEventListener("click", function (e) {
         hideKeyboard(document.activeElement);
       setTimeout(function () {
         document.getElementById('output').scrollIntoView();
-      }, 100);
+      }, 500);
     }
   }
 });

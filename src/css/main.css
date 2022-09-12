@@ -19,8 +19,8 @@
   --purple:#d96ff8;
   --red-l:#FF3B30;
   --red-d:#FF3B30;
-  --overly-l:rgba(0, 0, 0, 0.3);
-  --overly-d:rgba(0, 0, 0, 0.7);
+  --overly-l:rgba(0, 0, 0, 0.4);
+  --overly-d:rgba(0, 0, 0, 0.9);
   --bx-shad: rgb(0 0 0 / 10%) 0px 0px 2px, rgb(15 91 206 / 10%) 0px 2px 32px;
   --mainFont: "Nunito Sans", sans-serif;
 }
@@ -706,7 +706,7 @@ main {
   background-color: var(--bg-secondary);
   width: 90%;
   max-width: 500px;
-  padding: 8px;
+  padding: 16px;
   border-radius: 9px;
   z-index: 1000;
 }
@@ -718,7 +718,6 @@ main {
 }
 .modal-overly .modal .main-container {
   flex-direction: column;
-  padding: 0 8px 8px 8px;
 }
 .modal-overly .modal .main-container .icon {
   padding-bottom: 8px;

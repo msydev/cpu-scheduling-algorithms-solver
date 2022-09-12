@@ -1,3 +1,9 @@
+// global
+@import './global/btn';
+@import './global/primary-btn';
+@import './global/close-btn';
+
+
 // HEADER
 @import './header/themeToggle';
 @import './header/logo';
@@ -6,7 +12,6 @@
 
 // input
 @import './main/input/inputField';
-@import './main/input/solveBtn';
 @import './main/input/selectField';
 @import './main/input/inputSection';
 

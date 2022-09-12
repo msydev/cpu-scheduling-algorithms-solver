@@ -1,18 +1,12 @@
-.solve-btn{
+.primary-btn{
   display: inline-block;
   position: relative;
   overflow: hidden;
+  font: var(--f-bodyBold);
   background-color: var(--blue);
   color: var(--white);
-  font: var(--f-bodyBold);
-  border-radius: 9px;
   padding: 12px 32px;
-  margin-top: 8px;
-  transition: all .2s;
-
-  &:hover{
-      background-color: var(--dark-blue);
-  }
+  
   & span{
     position: absolute;
   }
@@ -28,4 +22,7 @@
     background-color: var(--blue);
     };
   }
+  &:hover{
+    background-color: var(--dark-blue);
+}
 }

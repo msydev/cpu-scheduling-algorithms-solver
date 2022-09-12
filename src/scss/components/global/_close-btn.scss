@@ -1,0 +1,15 @@
+.close-btn{
+    @extend %flex-center-center;
+    padding: 12px;
+    border-radius: 4px;
+    & svg{
+        stroke: var(--tx-primary);
+    }
+    &:hover{
+        background-color: var(--gray);
+    }
+
+    @include for-phone-only{
+        border: 1px solid var(--gray);
+    }
+}

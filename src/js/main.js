@@ -5,7 +5,7 @@ import { solve } from "./components/output/solve/index.js";
 import getData from "./components/input/gatheringData.js";
 import output from "./components/output/output.js";
 import { themeToggle } from "./components/themeToggle.js";
-import renderCpuUtilization from "./components/output/renderCpuUtilization.js";
+import { initModal } from "./components/modal.js";
 
 const solveBtn = document.querySelector(".solve-btn");
 
@@ -13,6 +13,7 @@ const solveBtn = document.querySelector(".solve-btn");
 solveBtn.addEventListener("click", createRipple);
 handleSelectBox();
 themeToggle();
+initModal();
 
 solveBtn.addEventListener("click", function (e) {
   const data = getData();

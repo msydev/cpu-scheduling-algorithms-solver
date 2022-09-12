@@ -16,12 +16,16 @@
   --pink:#fb339b;
   --green:#34C759;
   --orange:#ff8b34;
-  --purble:#e18cf9;
+  --purple:#d96ff8;
+  --red-l:#FF3B30;
+  --red-d:#FF3B30;
+  --overly-l:rgba(0, 0, 0, 0.3);
+  --overly-d:rgba(0, 0, 0, 0.7);
   --bx-shad: rgb(0 0 0 / 10%) 0px 0px 2px, rgb(15 91 206 / 10%) 0px 2px 32px;
   --mainFont: "Nunito Sans", sans-serif;
 }
 
-.modal-overly .moadl, .modal-overly, .table-section, .cpu-utilization-container .chart-details .detial, .cpu-utilization-container, .logo-container svg, .logo-container {
+.modal-overly .modal .main-container .icon, .modal-overly .modal .main-container, .modal-overly .modal .header-container, .modal-overly, .table-section, .cpu-utilization-container .chart-details .detial, .cpu-utilization-container, .logo-container svg, .logo-container, .close-btn, svg {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,6 +143,8 @@ html[data-theme=light] {
   --gray:var(--gray11);
   --light-gray:var(--gray11);
   --blue-switch:var(--blue);
+  --red:var(--red-l);
+  --overly:var(--overly-l);
   --bg-primary:var(--gray12);
   --bg-secondary:var(--white);
   --bg-tertiary:var(--white);
@@ -155,6 +161,8 @@ html[data-theme=dark] {
   --gray:var(--gray3);
   --light-gray:var(--gray4);
   --blue-switch:var(--light-blue);
+  --red:var(--red-d);
+  --overly:var(--overly-d);
   --bg-primary:var(--gray1);
   --bg-secondary:var(--gray2);
   --bg-tertiary:var(--gray3);
@@ -190,6 +198,57 @@ main {
     display: flex;
     align-items: baseline;
     justify-content: center;
+  }
+}
+
+.btn {
+  border-radius: 9px;
+  transition: all 0.2s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.primary-btn {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font: var(--f-bodyBold);
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 12px 32px;
+}
+.primary-btn span {
+  position: absolute;
+}
+.primary-btn span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: var(--light-blue);
+}
+@media (max-width: 599px) {
+  .primary-btn:hover {
+    background-color: var(--blue);
+  }
+}
+.primary-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+.close-btn {
+  padding: 12px;
+  border-radius: 4px;
+}
+.close-btn svg {
+  stroke: var(--tx-primary);
+}
+.close-btn:hover {
+  background-color: var(--gray);
+}
+@media (max-width: 599px) {
+  .close-btn {
+    border: 1px solid var(--gray);
   }
 }
 
@@ -291,37 +350,6 @@ main {
 .input-field input:-webkit-autofill, .input-field input:-webkit-autofill:hover, .input-field input:-webkit-autofill:focus, .input-field input:-webkit-autofill:active {
   -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
   -webkit-transition-delay: 9999s;
-}
-
-.solve-btn {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  background-color: var(--blue);
-  color: var(--white);
-  font: var(--f-bodyBold);
-  border-radius: 9px;
-  padding: 12px 32px;
-  margin-top: 8px;
-  transition: all 0.2s;
-}
-.solve-btn:hover {
-  background-color: var(--dark-blue);
-}
-.solve-btn span {
-  position: absolute;
-}
-.solve-btn span.ripple {
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple 600ms linear;
-  background-color: var(--light-blue);
-}
-@media (max-width: 599px) {
-  .solve-btn:hover {
-    background-color: var(--blue);
-  }
 }
 
 .select-field {
@@ -667,10 +695,56 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 1;
   pointer-events: none;
   opacity: 0;
+  transition: all 0.2s;
 }
+.modal-overly .modal {
+  position: static;
+  display: inline-block;
+  background-color: var(--bg-secondary);
+  width: 90%;
+  max-width: 500px;
+  padding: 8px;
+  border-radius: 9px;
+  z-index: 1000;
+}
+.modal-overly .modal .header-container {
+  justify-content: flex-end;
+}
+.modal-overly .modal .header-container svg {
+  pointer-events: none;
+}
+.modal-overly .modal .main-container {
+  flex-direction: column;
+  padding: 0 8px 8px 8px;
+}
+.modal-overly .modal .main-container .icon {
+  padding-bottom: 8px;
+}
+.modal-overly .modal .main-container .icon svg {
+  width: 64px;
+  height: 64px;
+  stroke: var(--red);
+  pointer-events: none;
+}
+.modal-overly .modal .main-container .alert .modal-title {
+  color: var(--tx-primary);
+  text-align: center;
+  font: var(--f-headLine);
+  padding: 8px 0;
+}
+.modal-overly .modal .main-container .alert .modal-text {
+  color: var(--tx-secondary);
+  font: var(--f-bodyBold);
+  text-align: center;
+}
+.modal-overly .modal .main-container .btn-container {
+  margin-top: 16px;
+  align-self: end;
+}
+
 .modal-overly-show {
   opacity: 0.5;
 }
